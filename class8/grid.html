@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            background-color: green;
+            display: grid;
+            height: 500px;
+            width: 1400px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            margin: auto;
+        }
+
+        .box {
+            background-color: orange;
+        }
+
+        #box1 {
+            grid-column: 1/6;
+            grid-row: 1/2;
+            background-color: red;
+        }
+
+        .boxlast {
+            background-color: black;
+            -ms-grid-row-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="boxlast"></div>
+    </div>
+</body>
+
+</html>

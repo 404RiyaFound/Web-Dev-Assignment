@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            background-color: orange;
+            display: grid;
+            height: 1000px;
+            width: 1200px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+        #pink {
+            grid-column: 1/4;
+            background-color: pink;
+        }
+
+        #green {
+            grid-row: 2/4;
+            grid-column: 1/2;
+            background-color: green;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #black {
+            background-color: black;
+            grid-row: 2/4;
+            grid-column: 3/4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="pink"></div>
+        <div class="box" id="green"></div>
+        <div class="box" id="blue"></div>
+        <div class="box" id="blue"></div>
+        <div class="box" id="black"></div>
+
+    </div>
+</body>
+
+</html>
