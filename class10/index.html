@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      padding: 40px;
+      width: 400px;
+      margin: auto;
+    }
+    button{
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+      margin-left: 40px;
+      background-color: yellow;
+      transition-duration:1s, 3s, 2s;
+      transition-property: color, width, background-color;
+      
+    }
+    button:hover {
+        background-color: blue;
+        color: white;
+        /* width: 250px;
+        height: 250px;
+        border-radius: 50%; */
+        transform: translateX(3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <button>Click</button>
+  </div>
+</body>
+</html>
