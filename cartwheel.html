@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wheel{
+            margin-top: 100px;
+            position: relative;
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            border-radius: 50%;
+            animation: spin 10s linear infinite;
+            z-index: 1;
+        }
+        .boxes{
+            position: absolute;
+            top: -20%;
+            right:-30%;
+            transform: translateX(-50%);
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            border:  1px solid black;
+            z-index: 2;
+            animation: colors 3s infinite, rotate 5s linear infinite;
+        }
+        .arm{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform-origin: left center;
+            background-color: black;
+            width: 250px;
+            height: 2px;
+            border: 1px solid black;
+            z-index: 1;
+        }
+        @keyframes spin {
+            from{ transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+        @keyframes colors {
+            0%{
+                background-color: aqua;
+            }
+            20%{
+                background-color: blueviolet;
+            }
+            40%{
+                background-color: red;
+            }
+            60%{
+                background-color: orange;
+            }
+            80%{
+                background-color: yellow;
+            }
+            100%{
+                background-color: aquamarine;
+            }
+        }
+        @keyframes rotate {
+            from{ transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wheel">
+        <div class="arm" style="transform: rotate(0deg)">
+    <div class="boxes"></div>
+    </div>
+    <div class="arm" style="transform: rotate(60deg);">
+    <div class="boxes"></div>
+    </div>
+    <div class="arm" style="transform: rotate(120deg);">
+    <div class="boxes"></div>
+    </div>
+    <div class="arm" style="transform: rotate(180deg);">
+    <div class="boxes"></div>
+    </div>
+    <div class="arm" style="transform: rotate(240deg);">
+    <div class="boxes"></div>
+    </div>
+    <div class="arm" style="transform: rotate(300deg);">
+    <div class="boxes"></div>
+    </div>
+    </div>
+</body>
+</html>
